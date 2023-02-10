@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,10 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
+    BrowserAnimationsModule,
+    NbThemeModule.forRoot({ name: 'dark' }),
+    NbLayoutModule,
+    NbEvaIconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
