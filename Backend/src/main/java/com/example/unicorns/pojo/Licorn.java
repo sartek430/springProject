@@ -1,33 +1,58 @@
 package com.example.unicorns.pojo;
 
-public class Licorn {
-    private Integer type;
-    private String name;
-    private String color;
-    private Float price;
-    private Float horn_size;
-    private String description;
-    private Float max_speed;
-    private String spell;
-    private Integer power;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-    public Licorn(Integer type, String name, String color, Float price, Float horn_size, String description, Float max_speed, String spell, Integer power) {
-        this.type = type;
-        this.name = name;
-        this.color = color;
-        this.price = price;
-        this.horn_size = horn_size;
-        this.description = description;
-        this.max_speed = max_speed;
-        this.spell = spell;
-        this.power = power;
+@Entity
+@Table
+public class Licorn {
+
+    @Id
+    @Column
+    private int id;
+
+    @Column
+    private int type;
+
+    @Column
+    private String name;
+
+    @Column
+    private String color;
+
+    @Column
+    private float price;
+
+    @Column
+    private float horn_size;
+
+    @Column
+    private String description;
+
+    @Column
+    private float max_speed;
+
+    @Column
+    private String spell;
+
+    @Column
+    private int power;
+
+    public int getId() {
+        return id;
     }
 
-    public Integer getType() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getType() {
         return type;
     }
 
-    public void setType(Integer type) {
+    public void setType(int type) {
         this.type = type;
     }
 
@@ -47,19 +72,19 @@ public class Licorn {
         this.color = color;
     }
 
-    public Float getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
-    public Float getHorn_size() {
+    public float getHorn_size() {
         return horn_size;
     }
 
-    public void setHorn_size(Float horn_size) {
+    public void setHorn_size(float horn_size) {
         this.horn_size = horn_size;
     }
 
@@ -71,11 +96,11 @@ public class Licorn {
         this.description = description;
     }
 
-    public Float getMax_speed() {
+    public float getMax_speed() {
         return max_speed;
     }
 
-    public void setMax_speed(Float max_speed) {
+    public void setMax_speed(float max_speed) {
         this.max_speed = max_speed;
     }
 
@@ -87,11 +112,11 @@ public class Licorn {
         this.spell = spell;
     }
 
-    public Integer getPower() {
+    public int getPower() {
         return power;
     }
 
-    public void setPower(Integer power) {
+    public void setPower(int power) {
         this.power = power;
     }
 }
