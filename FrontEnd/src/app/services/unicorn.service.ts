@@ -10,7 +10,7 @@ import { BaseHttpService } from './base.http.service';
 @Injectable()
 export class UnicornService extends BaseHttpService {
   // constants
-  private readonly unicornApiUrl: string = 'apiUrl' + 'unicorn/';
+  private readonly unicornApiUrl: string = 'localhost:8080/unicorns';
 
   /**
    * Constructeur
@@ -27,8 +27,8 @@ export class UnicornService extends BaseHttpService {
    * Récupérer toutes les listStucks
    * @returns un tableau de type listStuck
    */
-  public getAll(): Observable<any> {
-    const url = 'apiUrl'
+  public getAll(): Observable<Unicorn[]> {
+    const url = 'localhost:8080/unicorns'
     return this.http.get<Unicorn[]>(url);
 }
 }

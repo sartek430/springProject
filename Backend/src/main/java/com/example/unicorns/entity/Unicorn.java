@@ -1,16 +1,20 @@
-package com.example.unicorns.pojo;
+package com.example.unicorns.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table
-public class Licorn {
+@Table(name = "unicorns")
+public class Unicorn {
 
     @Id
-    @Column
+    @GeneratedValue
     private int id;
 
     @Column

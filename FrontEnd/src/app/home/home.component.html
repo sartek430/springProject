@@ -11,20 +11,23 @@
     </nav>
     <main>
       <div class="toy-item">
-        <img src="toy1.jpg" alt="Jouet 1">
+        <img src="toy1.jpg" alt="Jouet 1" />
         <h3>Jouet 1</h3>
         <p>Description du jouet 1</p>
       </div>
       <div class="toy-item">
-        <img src="toy2.jpg" alt="Jouet 2">
+        <img src="toy2.jpg" alt="Jouet 2" />
         <h3>Jouet 2</h3>
         <p>Description du jouet 2</p>
       </div>
       <div class="toy-item">
-        <img src="toy3.jpg" alt="Jouet 3">
+        <img src="toy3.jpg" alt="Jouet 3" />
         <h3>Jouet 3</h3>
         <p>Description du jouet 3</p>
       </div>
     </main>
+    <li *ngFor="let unicorn of unicornList">
+      {{ unicorn.name }}
+    </li>
   </body>
 </html>

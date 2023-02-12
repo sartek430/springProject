@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch UnicornApplication",
+            "request": "launch",
+            "mainClass": "com.example.unicorns.UnicornApplication",
+            "projectName": "Backend"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-LicornApplication<Backend>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.unicorns.LicornApplication",
+            "projectName": "Backend",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
